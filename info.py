@@ -22,10 +22,10 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '5625891819:AAFRNvXWutaIfHHfOIHZ9oNV1BifAI9
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Bot images & videos
-PICS = (environ.get('PICS', 'https://telegra.ph/file/5553dc39f968b364d4856.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/0593a3103ba1b9a5855bf.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/bbabccf5c436689ccc9b9.mp4")
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2a888a370f479f4338f7c.jpg")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1867884587').split()]
@@ -37,7 +37,7 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
-reqst_channel = environ.get('-1001828784633')
+reqst_channel = environ.get('REQST_CHANNEL', '-1001828784633')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = -1001792675255
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
@@ -58,8 +58,8 @@ IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '📂 <em>File Name</em>: <code>PIRO|{file_name}</code> \n\n🖇 <em>File Size</em>: <code>{file_size}</code> \n\n❤️‍🔥 </i>Join</i> [𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗟𝗜𝗡𝗞𝗭](https://t.me/blaster_linkz)  \n\n🖥 <i>Requests</i> - ||@raixchat|| ')
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<code>{file_name}</code>\n\n<b>━━━━━━━━━━•••••━━━━━━━━━\n🍿 Find any movie - https://t.me/+aJkUib8zVb05NDVl\n🏘 Backup - @MOVIES_HUB_ALPHA\n❤️ SHARE AND SUPPORT US</b>')
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '<code>{file_name}</code>\n\n<b>━━━━━━━━━━•••••━━━━━━━━━\n🍿 Find any movie - https://t.me/+aJkUib8zVb05NDVl\n🏘 Backup - @MOVIES_HUB_ALPHA\n❤️ SHARE AND SUPPORT US</b>')
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", '🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [『ᴘɪʀᴏ』](t.me/rai_info17)')
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
