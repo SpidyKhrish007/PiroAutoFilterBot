@@ -10,7 +10,7 @@ class script(object):    START_TXT = """𝖸𝗈...𝖸𝗈... {} 💖
 
 <b>😎 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 @MOVIES_HUB_ALPHA</b>"""
 
-    HELP_TXT = """🙋🏻‍♂️   𝖧𝖾𝗅𝗅𝗈𝗈𝗈o Bacchooooooooooooo  {} 🤓
+    HELP_TXT = """🙋🏻‍♂️   𝖧𝖾𝗅𝗅𝗈𝗈𝗈o Bacchooooooooooooo 🤓
 
 ○  𝗂𝗍'𝗌 𝖭𝗈𝗍 𝖢𝗈𝗆𝗉𝗅𝗂𝖼𝖺𝗍𝖾𝖽...🤓
 
