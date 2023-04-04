@@ -245,20 +245,28 @@ async def next_page(bot, query):
 
 @Client.on_callback_query(filters.regex(r"^spol"))
 async def advantage_spoll_choker(bot, query):
-    _, key, user, movie_ = query.data.split('#')
+    try:
+        _, key, user, movie_ = query.data.split('#')
+    except ValueError:
+        return await query.answer('Invalid callback data!', show_alert=True)
+
     movies = SPELL_CHECK.get(key)
     if not movies:
         return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+
     if movie_ == "close_spellcheck":
         return await query.message.delete()
-    movie = movies[(int(movie_))]
+
+    movie = movies[int(movie_)]
     await query.answer(script.TOP_ALRT_MSG)
+
     gl = await global_filters(bot, query.message, text=movie)
-    if gl == False:
+    if not gl:
         k = await manual_filters(bot, query.message, text=movie)
-        if k == False:
+        if not k:
             files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
             if files:
                 k = (movie, files, offset, total_results)
