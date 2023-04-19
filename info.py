@@ -22,13 +22,13 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '6286222522:AAFmbTfdFRSFhbk921wXUIxqYy73g4Z
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 # Bot images & videos
-PICS = (environ.get('PICS', 'https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/54f7a3e8b55522e7d74ae.jpg")
+PICS = (environ.get('PICS', 'https://telegra.ph/file/560058b66c3b5dbfc6526.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/560058b66c3b5dbfc6526.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/560058b66c3b5dbfc6526.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/560058b66c3b5dbfc6526.jpg")
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1867884587 1532908493').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1867884587 1009704073 5749820434').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001811233102').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
