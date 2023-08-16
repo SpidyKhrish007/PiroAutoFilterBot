@@ -101,12 +101,12 @@ class Bot(Client):
                 yield message
                 current += 1
 
-from telegram.ext import CommandHandler
-def restart(update, context):
-    update.message.reply_text("Restarting...")
-    # Perform any necessary cleanup or shutdown procedures here
-    context.bot.stop()
-
+@bot.message_handler(commands=['restart'])
+def restart(message):
+    bot.send_message(message.chat.id, 'Bot is restarting...')
+    bot.stop()
+    bot.start()
+    
 dispatcher.add_handler(CommandHandler('restart', restart))
 
 app = Bot()
