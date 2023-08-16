@@ -794,3 +794,8 @@ async def deletemultiplefiles(bot, message):
             logger.info(f'File Found for your query {keyword}! Successfully deleted {file_name} from database.')
         deleted += 1
     await k.edit_text(text=f"<b>Process Completed for file deletion !\n\nSuccessfully deleted {str(deleted)} files from database for your query {keyword}.</b>")
+@bot.message_handler(commands=['restart'])
+def restart(message):
+    bot.send_message(message.chat.id, 'Bot is restarting...')
+    bot.stop()
+    bot.start()
