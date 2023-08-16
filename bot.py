@@ -106,8 +106,6 @@ def restart(message):
     bot.send_message(message.chat.id, 'Bot is restarting...')
     bot.stop()
     bot.start()
-    
-dispatcher.add_handler(CommandHandler('restart', restart))
 
 app = Bot()
 app.run()
