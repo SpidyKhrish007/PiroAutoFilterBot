@@ -1,6 +1,5 @@
 import logging
 import logging.config
-from telegram.ext import CommandHandler
 
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
@@ -101,6 +100,8 @@ class Bot(Client):
             for message in messages:
                 yield message
                 current += 1
+
+from telegram.ext import CommandHandler
 def restart(update, context):
     update.message.reply_text("Restarting...")
     # Perform any necessary cleanup or shutdown procedures here
