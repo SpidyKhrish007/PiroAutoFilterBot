@@ -104,3 +104,8 @@ class Bot(Client):
 
 app = Bot()
 app.run()
+@bot.message_handler(commands=['restart'])
+def restart(message):
+    bot.send_message(message.chat.id, 'Bot is restarting...')
+    bot.stop()
+    bot.start()
