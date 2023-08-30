@@ -16,7 +16,7 @@ PORT = environ.get("PORT", "8888")
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '23830477'))
 API_HASH = environ.get('API_HASH', '19f8365d98fb11c9cd6c1eaa8b1fa4b8')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6286222522:AAFXELTs4U7RALf-AwdldDV2d2jnh3GnFkE')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6384094059:AAFZxthHH9PoStCy-Z4wpkYnezoEo5jtDKU')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -483,18 +483,18 @@ SPELL_IMG = [
     "https://telegra.ph/file/5da622b0a0b356cea1a4c.jpg"
 ]
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1867884587').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001604178274').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6408116706').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001629572693').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001604178274')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001629572693')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
-reqst_channel = environ.get('REQST_CHANNEL', '-1001828784633')
+reqst_channel = environ.get('REQST_CHANNEL')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
-SUPPORT_CHAT_ID = -1001952829891
+SUPPORT_CHAT_ID = -1001806239141
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
@@ -506,8 +506,8 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001871138407'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MOVIES_HUB_ALPHA_DISCUSSION_2')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001607412183'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MHA_Discussion')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
