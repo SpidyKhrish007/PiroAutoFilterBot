@@ -150,7 +150,7 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA ⚔️', url="https://t.me/MOVIES_HUB_ALPHA") ] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA OFFICIAL ⚔️', url="https://t.me/MOVIES_HUB_ALPHA_OFFICIAL") ] ] ),
                     
                 )
             except FloodWait as e:
@@ -161,7 +161,7 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA ⚔️', url="https://t.me/MOVIES_HUB_ALPHA") ] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA OFFICIAL ⚔️', url="https://t.me/MOVIES_HUB_ALPHA_OFFICIAL") ] ] ),
                 )
             except Exception as e:
                 logger.warning(e, exc_info=True)
@@ -223,7 +223,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA ⚔️', url="https://t.me/MOVIES_HUB_ALPHA") ] ] ),
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA OFFICIAL ⚔️', url="https://t.me/MOVIES_HUB_ALPHA_OFFICIAL") ] ] ),
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
@@ -257,7 +257,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA ⚔️', url="https://t.me/MOVIES_HUB_ALPHA") ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ MOVIES HUB ALPHA OFFICIAL ⚔️', url="https://t.me/MOVIES_HUB_ALPHA_OFFICIAL") ] ] ),
     )
                     
 
